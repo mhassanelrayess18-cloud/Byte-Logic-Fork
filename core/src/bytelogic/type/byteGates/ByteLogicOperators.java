@@ -21,6 +21,7 @@ import bytelogic.ui.dialogs.*;
 import bytelogic.world.blocks.ByteLogicProcessor.*;
 import bytelogic.world.blocks.logic.*;
 import mindustry.gen.*;
+import mindustry.annotations.Annotations.*;
 import mindustry.io.*;
 import mma.ui.tiledStructures.*;
 import mma.ui.tiledStructures.TiledStructures.*;
@@ -1158,6 +1159,7 @@ public class ByteLogicOperators{
     }
 
     public static abstract class MathGate extends ByteLogicGate{
+        @Nosync
         public transient ConnectionSettings connections;//not null
 
         @Override
