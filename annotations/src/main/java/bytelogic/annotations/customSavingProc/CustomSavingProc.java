@@ -262,7 +262,11 @@ public class CustomSavingProc extends ModBaseProcessor{
             Fi folder = revisionsPath.child(revision.key);
             IntMap<ClassRevision> entries = revision.value;
             IntSeq keys = new IntSeq();
-            entries.each((k, v) -> keys.add(k));
+            IntMap.Keys iter = entries.keys();
+            while(iter.hasNext){
+                keys.add(iter.next());
+            }
+
             keys.sort();
             keys.each(key -> {
                 Jval jval = Jval.newObject();
