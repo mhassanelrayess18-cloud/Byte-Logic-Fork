@@ -159,6 +159,9 @@ configure(subprojects - project(":annotations")){
 
 
         kapt{
+            arguments{
+                arg("disableProcessors", "mma.annotations.ModEntityProcess")
+            }
             javacOptions{
                 option("-source", "17")
                 option("-target", "1.8")
